@@ -146,18 +146,28 @@ const PA_DATA = {
   // ── Platform Solutions (5 from Parker Aerospace slide) ──────────────
   platforms: [
     { name:"Flight Controls", color:"#f59e0b", icon:"✈️",
+      locations:["Military Flight Controls Div — Irvine, CA + Dublin, GA","Commercial Flight Controls Div — Ogden, UT"],
+      programs:["F-35 (JSF)","Military rotorcraft","Boeing 737 MAX","Boeing 787","Airbus A320neo"],
       products:["Trim actuation","Cockpit controls","Primary / secondary flight control actuators","Servovalves","Control electronics & software","Surface-position sensors","High-lift actuation"],
       cyient:"DO-178C software validation, FCS integration testing, certification documentation for flight control systems — Level A/B software capability" },
     { name:"Engine", color:"#f47920", icon:"🔥",
+      locations:["Gas Turbine Fuel Systems Div — Mentor, OH","Engine Systems Div — Grand Rapids, MI"],
+      programs:["CFM LEAP-1A/1B","GE GE9X","Rolls-Royce Trent 1000","GE T700 (military)"],
       products:["Fuel spray nozzles","Manifolds & pigtails","Thrust reverser actuators","Engine build unit","Heat management systems","Oil pumps & reservoirs","Pneumatics"],
       cyient:"Engine component tech pubs (CMM/IPC), fuel system CFD analysis, thermal management CAD — Gas Turbine Fuel Systems (Mentor OH) is primary entry" },
     { name:"Hydraulics", color:"#0075be", icon:"💧",
+      locations:["Hydraulic Systems Div — Kalamazoo, MI"],
+      programs:["Commercial widebody","Military aircraft","Rotary-wing platforms"],
       products:["Reservoirs & accumulators","Filters & valves","Heat exchangers","Pumps","Ground service equipment","Control electronics & software"],
-      cyient:"Hydraulic systems analysis, DO-160 test documentation, circuit design for next-gen electro-hydraulic systems" },
+      cyient:"Hydraulic systems analysis, DO-160 test documentation, circuit design for next-gen electro-hydraulic systems — Kalamazoo MI is the single division entry" },
     { name:"Fluid Conveyance", color:"#002b5c", icon:"🔧",
+      locations:["Fluid Systems Div — Irvine, CA · Elyria, OH · Hauppauge, NY · N. Hollywood, CA · Guaymas, Mexico","Stratoflex Products — Fort Worth, TX"],
+      programs:["Multi-platform (fluid routing for all major OEM programs)"],
       products:["Aerospace hoses & assemblies","Tubes & fittings","Couplings & manifolds","Fuel / hydraulic / pneumatic routing"],
       cyient:"Fluid routing design, system integration documentation, installation design drawings — Fluid Systems (Elyria OH) and Stratoflex (Ft Worth TX)" },
     { name:"Fuel & Inerting", color:"#6b7280", icon:"⛽",
+      locations:["Defense Systems Div — Irvine, CA (F-35 inerting)","Gas Turbine Fuel Systems Div — Mentor, OH (civil)"],
+      programs:["F-35 (integral fuel & inerting)","B737/A320 fuel gauging","Military transport"],
       products:["Fuel gauging management","Fuel pumps & valves","Control electronics & software","Inerting systems","NFBO (Nitrogen-enriched air systems)"],
       cyient:"Fuel system certification (DO-160, FAR 25), inerting system analysis, safety case documentation — F-35 and commercial platforms" }
   ],
@@ -220,21 +230,48 @@ const PA_DATA = {
 
   // ── Partnerships & Alliances ──────────────────────────────────────────
   partnerships: [
-    { name:"LTTS (L&T Technology Services)", type:"Existing Competitor", status:"Parker Ecosystem",
-      desc:"LTTS has a documented Parker Hannifin engagement (Machine I/O platform, Industry 4.0). They are already in the Parker ecosystem — primarily industrial/pneumatics, not aerospace ER&D.",
-      angle:"LTTS is Cyient's key competitor here. Differentiate on aerospace-specific credentials: AS9100D, DO-178C, DO-254, ITAR, Part 25 cert — none of which are LTTS's core." },
-    { name:"CDI Corporation (Engineering Staffing)", type:"Existing Vendor", status:"3-Year Agreement",
-      desc:"CDI has a 3-year managed staffing and project outsourcing agreement with Parker Aerospace. Provides contract engineering staff across multiple divisions.",
-      angle:"CDI is staffing, not ER&D. Cyient's pitch is project-based engineering outcomes, not bodies — lower management overhead, faster ramp, higher quality for cert-critical programs." },
-    { name:"Boeing (Commercial Flight Controls)", type:"OEM Customer", status:"Production Ramp",
-      desc:"Parker supplies primary/secondary flight controls for 737 MAX, 787. Boeing production rate increase drives sustained engineering demand for Parker Commercial Flight Controls (Ogden UT).",
-      angle:"Cyient's Boeing DLM production contract is the warm intro: 'We're already in Boeing's supply chain. Let us extend that relationship to your flight controls engineering team.'" },
-    { name:"Lockheed Martin (F-35 Defense)", type:"OEM Customer", status:"Active — Long Duration",
-      desc:"Parker supplies integral fuel & inerting systems for F-35. 191 F-35s delivered in 2025. Block 4 modernization extending program to 2031+. Defense Systems Division (Irvine CA) manages.",
-      angle:"F-35 tech pubs, CMM/IPC, and configuration management are long-horizon outsource opportunities. ITAR registration is the mandatory entry credential." },
-    { name:"CFM / GE / Rolls-Royce (Engine Systems)", type:"Engine OEM Partners", status:"Active",
-      desc:"Parker Gas Turbine Fuel Systems (Mentor OH) supplies fuel nozzles, manifolds, oil pumps for LEAP, GE9X, Trent 1000. Parker is embedded in every major current-generation engine programme.",
-      angle:"Engine system tech pubs, CFD analysis for nozzle optimisation, and oil system documentation — Cyient's CFM/Safran relationship provides warm credentialing into Parker GTFS." }
+    { name:"Dassault Systèmes",
+      category:"PLM / CAD / Simulation",
+      products:"CATIA V5/V6 (3D Design) · ENOVIA V6 (PLM & ITAR Compliance) · SIMULIA (FEA/Structural) · DELMIA (Mfg Simulation)",
+      confirmed:"Parker has used CATIA since 1984 for aerospace design. Implemented ENOVIA V6 Release 2011x enterprise-wide for export-controlled (ITAR) data compliance across Aerospace divisions — single PLM repository replacing multiple legacy systems. Source: Dassault Systèmes press release (2011) + Parker case study.",
+      repAngle:"Dassault Systèmes has a dedicated Aerospace & Defense Americas industry team. Search LinkedIn: 'Dassault Systèmes Parker Hannifin account executive' or 'DS A&D Americas Industry Director'. Dassault partner portal (3ds.com/partners) lists certified Value Added Resellers and system integrators in the aerospace vertical.",
+      cyient:"Cyient is a Dassault Systèmes certified partner and CATIA/ENOVIA implementation specialist. Pitch: 'Parker's Aerospace divisions run on CATIA and ENOVIA. Cyient can be your managed PLM support arm — CATIA V5→3DEXPERIENCE migration, ENOVIA PLM administration, SIMULIA structural analysis at 60% of in-house UK/US engineering cost. Entry: Irvine CA (Fluid Systems, Defense Systems) and Mentor OH (GTFS).'" },
+    { name:"ANSYS Inc.",
+      category:"Safety-Critical SW Dev / DO-178C",
+      products:"SCADE Suite (DO-178C model-based SW development, Level A/B) · Ansys HFSS (electromagnetic) · Ansys Fluent (optional CFD)",
+      confirmed:"Parker Aerospace Aircraft Software team confirmed 7+ years using ANSYS SCADE Suite for DO-178C Level A/B certified software: hydraulic system controls, indication & monitoring, motor controls, and actuator software. Parker develops aerospace products using SCADE before full certification. Source: Parker NA Aircraft Software page + Ansys aerospace case studies.",
+      repAngle:"Ansys has a dedicated Aerospace & Defense vertical sales team. Search LinkedIn: 'Ansys Parker Aerospace account manager' or 'Ansys A&D Sales Director Americas'. Ansys partner program (ansys.com/partners) lists certified channel partners and simulation service providers — Cyient's DO-178C capability makes it a natural ecosystem fit.",
+      cyient:"Cyient uses SCADE in active DO-178C Level A/B programs. Exact tool overlap with Parker Aerospace's flight controls software workflow. Pitch: 'We develop DO-178C Level A/B software in SCADE — the same toolchain your Aircraft Software team uses. Cyient can extend Parker's flight controls software engineering capacity at Military FCS (Irvine CA + Dublin GA) and Commercial FCS (Ogden UT) without the hiring overhead.'" },
+    { name:"Microsoft (Azure)",
+      category:"Cloud / Data Analytics / IoT",
+      products:"Azure Databricks (engineering data processing) · Microsoft Power BI (analytics dashboards) · Azure IoT Operations (factory floor integration) · Azure SQL / Data Lake",
+      confirmed:"Parker Aerospace deployed Azure Databricks enterprise-wide, cutting data processing time from 14 hours to 2 hours — one of the most dramatic Azure ROI case studies in A&D manufacturing. Litmus Edge + Azure IoT Operations is live at Parker factory sites for real-time operational data. Source: Microsoft Customer Stories (named Parker Aerospace case study, 2024).",
+      repAngle:"Microsoft has a dedicated named account executive for Parker Hannifin (Fortune 200 customer). Search LinkedIn: 'Microsoft account executive Parker Hannifin' or contact Microsoft Aerospace & Defense Industry team. For partner co-sell: Microsoft Partner Center — Azure ISV partner program for analytics and IoT workloads (Parker's confirmed use cases).",
+      cyient:"Cyient is an Azure certified partner. Pitch: 'Parker Aerospace already runs Azure Databricks enterprise-wide. Cyient builds on top of that platform — engineering analytics pipelines, supply chain data ops, predictive maintenance data lakes for Gas Turbine Fuel Systems (Mentor OH) and Hydraulic Systems (Kalamazoo MI). We extend your Azure investment into aerospace-specific ER&D intelligence workflows.'" },
+    { name:"SAP",
+      category:"ERP / MES / Digital Enterprise",
+      products:"SAP S/4HANA Cloud (ERP backbone) · SAP FICO · SAP PP/MM (manufacturing & materials planning)",
+      confirmed:"Parker Hannifin is mid-migration to SAP S/4HANA Cloud — one of the most complex ERP consolidations in A&D: 8 Aerospace divisions running 6 different legacy ERP systems converging to S/4HANA. Multiple SAP ABAP/FICO consultant and Data Conversion Manager roles confirmed active on LinkedIn. Prior: Oracle ERP (phased out). Source: LinkedIn hiring signals + AppsRunTheWorld enterprise software database.",
+      repAngle:"SAP has a Named Account Executive for Parker Hannifin at Fortune 200 scale. Search LinkedIn: 'SAP account executive Parker Hannifin' or 'SAP Aerospace Defense Americas'. SAP partner network (partneredge.sap.com) lists certified aerospace and manufacturing implementation partners — Cyient's SAP practice is the route in.",
+      cyient:"Cyient is an SAP certified partner with aerospace manufacturing expertise. Pitch: 'Parker is consolidating 6 ERP systems into S/4HANA across 8 Aerospace divisions. Cyient delivers the PLM-to-ERP integration layer — CATIA/ENOVIA to S/4HANA data flows — and the aerospace manufacturing module configuration (PP, MM, QM) with AS9100/DO-178C compliance hooks. Entry angle: Meggitt site ERP migrations (Braking Systems Akron OH, Fire Safety Simi Valley CA).'" },
+    { name:"Siemens Digital Industries",
+      category:"Systems Simulation / Model-Based Engineering",
+      products:"Simcenter Amesim (hydraulic & fluid system simulation) · Simcenter STAR-CCM+ (optional CFD) · Simcenter Testlab (test data correlation)",
+      confirmed:"Parker Hydraulic Cartridge Systems (HCS) division confirmed using Simcenter Amesim for hydraulic circuit modeling and valve optimization — reducing physical test cycles. Siemens named Parker among primary hydraulic simulation customers in their case study. Applicable to Hydraulic Systems Div (Kalamazoo MI) and Fluid Systems Div. Source: Siemens Digital Industries case study (published).",
+      repAngle:"Siemens Digital Industries Aerospace & Defense sales team for Americas. Search LinkedIn: 'Siemens Simcenter Parker Hannifin account manager' or 'Siemens A&D Americas'. Siemens partner portal (siemens.com/partner) for certified Simcenter simulation service partners — Cyient's systems modeling team qualifies.",
+      cyient:"Cyient's systems modeling team is proficient in Simcenter and LMS tools. Pitch: 'Parker's Hydraulic Systems and Fluid Systems divisions run Simcenter Amesim for circuit simulation. Cyient can provide hydraulic systems modeling engineering — next-gen EHA/EMA (electro-hydraulic actuator) simulation for the Commercial and Military FCS programs, accelerating Parker's transition from conventional hydraulics to more-electric architectures.'" },
+    { name:"Camgian (AI / Edge Intelligence Partner)",
+      category:"AI / Predictive Maintenance / IoT",
+      products:"Cognitive computing platform · Smart Gateway (edge AI for ground vehicles) · Predictive Maintenance-as-a-Service (PMaaS)",
+      confirmed:"Formal Parker-Camgian partnership announced March 2022 — Parker Electronic Motion & Controls Division + Camgian. DoD contract awarded January 2023 for Smart Gateway: AI predictive maintenance on Army ground combat vehicles using Parker's proprietary IoT telematics. Camgian's AI anomaly detection runs on both cloud and edge. Source: Parker press release + Camgian DoD announcement.",
+      repAngle:"Camgian is an active Parker ecosystem partner — approach Camgian VP Business Development for a co-sell route into Parker Electronic Motion & Controls. For the aerospace expansion angle: target Parker's Engineering Analytics or Digital Transformation team leads (Irvine CA corporate engineering / Cleveland HQ). Camgian-Parker partnership page is live at discover.parker.com/camgian.",
+      cyient:"AI/ML engineering services + IoT data pipeline design. Pitch: 'Parker's Camgian platform generates AI predictive maintenance data for industrial and ground vehicles. Cyient builds the aerospace adaptation layer on top — engine health monitoring for Gas Turbine Fuel Systems (Mentor OH), hydraulic system prognostics (Kalamazoo MI), and brake wear prediction (Braking Systems, Akron OH). Same AI infrastructure Parker already owns, extended into Aerospace ER&D analytics.'" },
+    { name:"Cority (Quality Management)",
+      category:"Quality / EHS / AS9100 Compliance",
+      products:"Cority QMS (Quality Management System) · EHS Module · Audit management · ISO/AS compliance tracking",
+      confirmed:"Parker Hannifin has been a Cority customer since 1993 — one of Cority's longest-tenured aerospace customers. Consolidated 50+ quality manuals into a single system. Reduced administrative cost $15,000/year per module. Used to maintain AS9100, AS9110, AS9120 certifications across divisions. Source: Cority published case study ('When Parker Hannifin Met Cority').",
+      repAngle:"Cority has a dedicated aerospace customer success manager for Parker (a 30+ year relationship). Contact Cority VP Customer Success or search LinkedIn: 'Cority Parker Hannifin account manager'. For Cyient angle: Cority's partner/integrator network is the route in — Cority Professional Services may sub-contract QMS implementation work.",
+      cyient:"AS9100D-certified delivery center in Hyderabad. Pitch: 'Post-Meggitt integration, Parker is absorbing Meggitt's legacy QMS (Coventry UK, Simi Valley CA, Akron OH sites) into the Parker Cority standard. Cyient can provide first-article documentation, AS9100 audit preparation, and quality manual migration for newly-integrated Meggitt divisions — at India delivery cost. This directly supports Parker's $50M FY2026 Meggitt synergy target.'" }
   ],
 
   // ── Industry Events 2026 ──────────────────────────────────────────────
@@ -548,7 +585,10 @@ const PA_DATA = {
 
 <!-- ═══ PARTNERSHIPS ═══ -->
 <div id="partnerships" class="section">
-  <div class="section-title">🤝 Partnerships &amp; Alliances — Parker Ecosystem</div>
+  <div class="section-title">🛠️ Tool &amp; Technology Vendors — Parker Aerospace Ecosystem</div>
+  <div class="warn-blue" style="margin-bottom:22px;">
+    <strong>Research-confirmed intel:</strong> These are the enterprise software and technology vendors who have sold into Parker Hannifin / Parker Aerospace — confirmed via press releases, case studies, job postings, and public filings. Each card shows what they sell, where it's deployed, and how Cyient can partner with or displace each vendor to reach Parker engineering buyers.
+  </div>
   <div id="pw-cards" class="grid-2"></div>
 </div>
 
@@ -657,12 +697,18 @@ function initDashboard() {
     <div class="platform-card">
       <div class="platform-header" style="background:${p.color};">
         <div style="font-size:16px;font-weight:700;">${p.icon} ${p.name}</div>
+        <div style="font-size:11px;margin-top:5px;opacity:.9;">📍 ${p.locations.join(' &nbsp;|&nbsp; ')}</div>
       </div>
       <div class="platform-products">
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:#666;letter-spacing:.5px;margin-bottom:5px;">✈️ Key Programs</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;">
+          ${p.programs.map(pg => `<span class="tag tag-orange">${pg}</span>`).join('')}
+        </div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:#666;letter-spacing:.5px;margin-bottom:5px;">🔩 Products</div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;">
           ${p.products.map(pr => `<span class="tag tag-blue">${pr}</span>`).join('')}
         </div>
-        <div style="background:#f0fdf4;border-left:3px solid #22c55e;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#166534;font-weight:600;">🎯 Cyient Angle: ${p.cyient}</div>
+        <div style="background:#f0fdf4;border-left:3px solid #22c55e;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#166534;font-weight:600;line-height:1.6;">🎯 Cyient Angle: ${p.cyient}</div>
       </div>
     </div>`).join('');
 
@@ -726,9 +772,12 @@ function initDashboard() {
   // ── Partnerships ──────────────────────────────────────────────────────
   document.getElementById('pw-cards').innerHTML = d.partnerships.map(p => `
     <div class="card" style="border-top-color:#0284c7;">
-      <div class="card-title">${p.name} <span class="tag">${p.type}</span> <span class="tag" style="background:#dcfce7;color:#166534;">${p.status}</span></div>
-      <p style="font-size:12.5px;line-height:1.7;color:#444;margin-bottom:10px;">${p.desc}</p>
-      <div style="background:#eff6ff;border-left:3px solid #0284c7;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#1e40af;font-weight:600;">🎯 Cyient Angle: ${p.angle}</div>
+      <div class="card-title" style="margin-bottom:10px;">${p.name} <span class="tag tag-blue">${p.category}</span> <span class="tag" style="background:#dcfce7;color:#166534;">✅ Confirmed at Parker</span></div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:#0075be;margin-bottom:4px;letter-spacing:.5px;">📦 Products / Tools at Parker</div>
+      <p style="font-size:12px;line-height:1.7;color:#444;margin-bottom:10px;">${p.products}</p>
+      <div style="background:#f0fdf4;border-left:3px solid #16a34a;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#166534;margin-bottom:8px;line-height:1.6;"><strong>📋 Confirmed Usage:</strong> ${p.confirmed}</div>
+      <div style="background:#fefce8;border-left:3px solid #ca8a04;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#92400e;margin-bottom:8px;line-height:1.6;"><strong>🔍 Account Rep Strategy:</strong> ${p.repAngle}</div>
+      <div style="background:#eff6ff;border-left:3px solid #0284c7;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#1e40af;font-weight:600;line-height:1.6;">🎯 Cyient Angle: ${p.cyient}</div>
     </div>`).join('');
 
   // ── Events ────────────────────────────────────────────────────────────
