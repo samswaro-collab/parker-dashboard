@@ -105,8 +105,7 @@ const PA_DATA = {
     aeroPresident: { name:"Jay P. Reidy", title:"VP & President — Aerospace Systems Group", since:"Jan 1, 2024", location:"Irvine, CA" },
     vpOps: { name:"Mike Portela", title:"Group VP, Operations — Aerospace", since:"~2023", location:"Irvine, CA" },
     vpSC: { name:"Ryan McElroy", title:"VP, Supply Chain Management — Aerospace", since:"~2023", location:"Irvine, CA" },
-    vpAftermarket: { name:"Mark Mourani", title:"VP, Commercial Aftermarket — Aerospace", since:"~2023", location:"Irvine, CA" },
-    evpHR: { name:"Mark Hart", title:"EVP, Human Resources & External Affairs", since:"~2020", location:"Cleveland, OH" }
+    vpAftermarket: { name:"Mark Mourani", title:"VP, Commercial Aftermarket — Aerospace", since:"~2023", location:"Irvine, CA" }
   },
 
   // ── Aerospace Group Divisions (from Parker Meggitt slide) ─────────────
@@ -135,7 +134,7 @@ const PA_DATA = {
       { name:"Fire, Safety & Power Systems Division", sites:["Simi Valley, CA","Portland, OR","Tucson, AZ"],
         focus:"Fire detection/extinguishing, halon/water mist, electrical power distribution — Meggitt-origin", meggitt:true },
       { name:"Defense Systems Division",            sites:["Irvine, CA (Defense)","Irvine, CA (MOC)"],
-        focus:"Integrated defense systems, mission operations, classified military program support", meggitt:true },
+        focus:"Integrated defense systems, mission operations, ITAR-controlled military program support (non-cleared engineering services)", meggitt:true },
       { name:"Motion, Power & Sensing Division",    sites:["Avrille France","Archamps France","Fribourg Switzerland","Fareham UK","Dong Nai Vietnam","Wiesbaden Germany"],
         focus:"Sensors, actuators, LVDT, position sensing, motion control — Meggitt-origin global footprint", meggitt:true },
       { name:"Services & Support / CSO",            sites:["Miami, FL","Gardena, CA","Singapore","Ansty Park UK","Irvine, CA"],
@@ -296,18 +295,33 @@ const PA_DATA = {
   // ── Hiring Intelligence ───────────────────────────────────────────────
   hiring: {
     openRoles: 991,
-    aeroFocus: ["Aerospace Engineering (multiple divisions)","Avionics / Systems Engineering (Irvine CA, Ogden UT)","Manufacturing Engineering (Akron OH, Mentor OH)","HR Manager — Aerospace Group","TA Partner — Aerospace (Kevin Mendez, Senior TA)"],
+    aeroFocus: ["Aerospace Systems Engineering (multiple divisions)","DO-178C / DO-254 Certification Engineering (Irvine CA, Ogden UT)","Manufacturing Engineering (Akron OH, Mentor OH)","Flight Controls SW Engineering (Ogden UT)","Systems Integration & Test (Mentor OH, Kalamazoo MI)"],
     hotDivisions: [
       { div:"Gas Turbine Fuel Systems", loc:"Mentor, OH", why:"LEAP production ramp driving continuous engineering demand" },
       { div:"Commercial Flight Controls", loc:"Ogden, UT", why:"Boeing 737 MAX rate push; DO-178C cert documentation bottleneck" },
       { div:"Braking Systems", loc:"Akron, OH / Coventry UK", why:"Meggitt integration; B787/A350 brake system ramp-up" },
-      { div:"Defense Systems", loc:"Irvine, CA", why:"F-35 Block 4 + defence budget growth; classified engineering demand" },
+      { div:"Defense Systems", loc:"Irvine, CA", why:"F-35 Block 4 + defence budget growth; ITAR-compliant tech pubs, CMM/IPC + configuration management demand (non-cleared)" },
       { div:"Motion Power & Sensing", loc:"Fareham UK / Fribourg Switzerland", why:"Sensor/actuator demand across next-gen platforms" }
     ],
-    taContacts: [
-      { name:"Kevin Mendez", title:"Senior Talent Acquisition Partner", location:"Parker Hannifin (Aerospace)", li:"linkedin.com/in/ — search Kevin Mendez Parker Hannifin" },
-      { name:"Rick Clary", title:"Director HR — Aerospace Group", location:"Irvine, CA / Cleveland, OH", li:"Search Rick Clary Parker Aerospace on LinkedIn" },
-      { name:"Mark Hart", title:"EVP Human Resources & External Affairs", location:"Cleveland, OH", li:"Corporate HR authority — group-level ER&D resourcing decisions" }
+    engBuyers: [
+      { name:"VP Engineering — Gas Turbine Fuel Systems", title:"Division VP Engineering · Budget Authority: LEAP / GE9X / Trent 1000 programs", location:"Mentor, OH",
+        why:"Parker's highest-pressure division — LEAP-1A/1B production at CFM rate means continuous engineering demand. CMM/IPC authoring, CFD analysis, fuel nozzle design are all outsourceable scope.",
+        li:"Search LinkedIn: 'Parker Gas Turbine Fuel Systems VP Engineering Mentor Ohio' · Also search 'Parker Hannifin Mentor OH Director Engineering'" },
+      { name:"VP Engineering — Commercial Flight Controls", title:"Division VP Engineering · Budget Authority: Boeing 737 MAX / A320neo programs", location:"Ogden, UT",
+        why:"Boeing targeting 38+ 737 MAX/month in 2026. Each aircraft = Parker flight controls. Rate increase = DO-178C cert documentation bottleneck. Highest-urgency outsource opportunity in the portfolio.",
+        li:"Search LinkedIn: 'Parker Commercial Flight Controls VP Engineering Ogden' · Alt: 'Parker Hannifin Ogden UT Director Systems Engineering'" },
+      { name:"VP Engineering — Defense Systems", title:"Division VP Engineering · Budget Authority: F-35 integral fuel & inerting", location:"Irvine, CA",
+        why:"F-35 Block 4 program extended to 2031+. ITAR-registered delivery is the mandatory entry credential. Tech pubs, CMM/IPC, and configuration management are long-horizon outsource lines.",
+        li:"Search LinkedIn: 'Parker Defense Systems VP Engineering Irvine CA' · Must lead with ITAR registration in outreach" },
+      { name:"VP Engineering — Braking Systems", title:"Division VP Engineering · Budget Authority: B787/A350 brake programs + Meggitt synergy", location:"Akron, OH / Coventry, UK",
+        why:"$50M Meggitt synergy target — FY2026 final push. Braking Systems is one of the highest-cost Meggitt-origin divisions. Engineering outsource directly contributes to synergy target.",
+        li:"Search LinkedIn: 'Parker Braking Systems VP Engineering' or 'Parker Hannifin Braking Systems Director Engineering Akron'" },
+      { name:"VP Engineering — Hydraulic Systems", title:"Division VP Engineering · Budget Authority: EHA/EMA next-gen programs", location:"Kalamazoo, MI",
+        why:"Transitioning from conventional hydraulics to electro-hydraulic actuators (EHA/EMA). Simcenter Amesim simulation, hydraulic systems analysis, and circuit design are core outsource opportunities.",
+        li:"Search LinkedIn: 'Parker Hydraulic Systems Division VP Engineering Kalamazoo' or 'Parker Hannifin Kalamazoo Director Engineering'" },
+      { name:"Mike Portela", title:"Group VP, Operations — Parker Aerospace · Cross-division budget authority", location:"Irvine, CA",
+        why:"VP Operations controls outsourced engineering decisions across all 12 Aerospace divisions. The Meggitt synergy angle ('$50M remaining — ER&D outsource closes the gap') is the most direct path to a meeting.",
+        li:"Search LinkedIn: 'Mike Portela Parker Aerospace' — confirmed VP Operations" }
     ]
   },
 
@@ -346,7 +360,7 @@ const PA_DATA = {
     { title:"DO-178C Level A/B Software Validation", relevance:"Critical for Commercial & Military Flight Controls (Ogden UT, Irvine CA, Dublin GA). FCS software cert is the hardest and most expensive ER&D line item — and the most outsourceable." },
     { title:"Gas Turbine Systems Tech Pubs (CMM/IPC)", relevance:"Gas Turbine Fuel Systems (Mentor OH) ships to every major engine OEM. Continuous CMM, IPC, service bulletin authoring work — directly outsourceable." },
     { title:"Braking Systems Structural Analysis + Cert", relevance:"Braking Systems Division (Akron/Coventry) is Meggitt-origin, under synergy pressure. FEA structural analysis, DO-160 test docs, brake certification support." },
-    { title:"ITAR-Compliant Defense ER&D", relevance:"Defense Systems Division (Irvine CA) manages F-35 and classified programmes. ITAR registration + FIPS-compliant delivery is a mandatory credential — and a competitive moat." },
+    { title:"ITAR-Compliant Defense ER&D", relevance:"Defense Systems Division (Irvine CA) manages F-35 and ITAR-controlled defence programmes. ITAR registration + FIPS-compliant delivery is a mandatory credential for non-cleared engineering work — and a competitive moat." },
     { title:"India Cost Arbitrage at AS9100D Quality", relevance:"For every Parker division spending on UK/US engineering: Braking (Coventry), Motion Power & Sensing (Fareham/Fribourg), Gas Turbine (Ansty Park). India team at 60% cost savings with aerospace cert pedigree." }
   ],
 
@@ -515,9 +529,10 @@ const PA_DATA = {
   <div class="section-title">👥 Key Contacts — Parker Aerospace</div>
   <div class="warn-blue" id="ct-note">⚠️ <strong>Verify on LinkedIn before outreach.</strong> Parker Hannifin org is organised by division and site. Entry point: Aerospace Group President (Irvine CA) → VP Operations → Division GMs/VPs by site.</div>
   <div id="ct-exec" class="grid-2" style="margin-bottom:20px;"></div>
-  <div class="card" style="border-top-color:#f47920;">
-    <div class="card-title">TA &amp; HR Contacts — Aerospace</div>
-    <div id="ct-ta"></div>
+  <div class="card" style="border-top-color:#f47920;margin-top:20px;">
+    <div class="card-title">🎯 Engineering &amp; Program Buyers — Division Level</div>
+    <div style="font-size:12px;color:#666;margin-bottom:14px;">These are the budget holders actively spending on programs. VP Engineering by division = the person who decides whether to hire or outsource. Mike Portela (VP Ops) is the group-level ER&D outsourcing authority.</div>
+    <div id="ct-ta" class="grid-2"></div>
   </div>
 </div>
 
@@ -552,6 +567,10 @@ const PA_DATA = {
 <!-- ═══ HIRING INTELLIGENCE ═══ -->
 <div id="hiring" class="section">
   <div class="section-title">💼 Hiring Intelligence — Parker Aerospace</div>
+  <div style="background:#fef9c3;border:1.5px solid #eab308;border-radius:8px;padding:10px 16px;margin-bottom:16px;font-size:12px;color:#713f12;display:flex;align-items:center;gap:10px;">
+    <span style="font-size:16px;">🔍</span>
+    <span><strong>Non-Cleared Roles Only</strong> — Cyient targets: US Citizens · Green Card holders · No citizenship restriction roles. Secret / TS / SCI / classified positions are excluded from this tracker.</span>
+  </div>
   <div class="grid-2">
     <div class="card">
       <div class="card-title">Active Open Roles</div>
@@ -684,12 +703,13 @@ function initDashboard() {
       <div class="contact-location">📍 ${l.location} &nbsp;·&nbsp; Since ${l.since}</div>
     </div>`).join('');
 
-  document.getElementById('ct-ta').innerHTML = d.hiring.taContacts.map(t => `
+  document.getElementById('ct-ta').innerHTML = d.hiring.engBuyers.map(t => `
     <div class="contact-card" style="border-left-color:#f47920;">
       <div class="contact-name">${t.name}</div>
-      <div class="contact-title">${t.title}</div>
+      <div class="contact-title" style="color:#002b5c;font-weight:600;">${t.title}</div>
       <div class="contact-location">📍 ${t.location}</div>
-      <div style="font-size:10.5px;color:#0075be;margin-top:4px;">🔗 ${t.li}</div>
+      <div style="font-size:11px;color:#444;margin-top:6px;line-height:1.6;background:#fff8f0;padding:6px 8px;border-radius:4px;">💡 <strong>Why now:</strong> ${t.why}</div>
+      <div style="font-size:10.5px;color:#0075be;margin-top:6px;">🔗 ${t.li}</div>
     </div>`).join('');
 
   // ── Platforms ─────────────────────────────────────────────────────────
@@ -757,14 +777,14 @@ function initDashboard() {
   document.getElementById('op-headline').textContent = op.headline;
   document.getElementById('op-badge').textContent    = op.badge;
   document.getElementById('op-triggers').innerHTML   = op.triggers.map(t => `
-    <div class="card" style="border-top-color:#7c3aed;">
+    <div class="card" style="border-top-color:#0078d4;">
       <div class="card-title">${t.icon} ${t.label}</div>
       <p style="font-size:12.5px;line-height:1.7;color:#444;margin-bottom:10px;">${t.body}</p>
       <div style="background:#f0fdf4;border-left:3px solid #22c55e;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#166534;font-weight:600;">⚡ Action: ${t.action}</div>
     </div>`).join('');
   document.getElementById('op-steps').innerHTML = op.coldToWarm.map(s => `
     <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #f0f0f0;">
-      <div style="min-width:28px;height:28px;background:#7c3aed;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">${s.step}</div>
+      <div style="min-width:28px;height:28px;background:#0078d4;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">${s.step}</div>
       <div><div style="font-size:13px;font-weight:700;color:#1a1a2e;margin-bottom:4px;">${s.label}</div>
       <div style="font-size:12px;color:#555;line-height:1.6;">${s.body}</div></div>
     </div>`).join('');
